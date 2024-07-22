@@ -5,24 +5,33 @@
   <title>Chessboard</title>
   <style>
     /* Write your code here */
+    .parent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
     .container {
       width: 800px;
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-columns: repeat(8, 1fr);
+      border: 1px solid black;
 
     }
 
     .white {
-      background-color: #f0d9b5;
       width: 100px;
       height: 100px;
+      height: 100px;
+      background-color: #123456;
+      background-image: url(http://www.zingerbugimages.com/backgrounds/royal_blue_abstract_stone_pattern_tileable.jpg)
     }
-
     .black {
-      background-color: #b58863;
       width: 100px;
       height: 100px;
+      background-image: url(http://www.zingerbugimages.com/backgrounds/green_sand_stone.jpg)
     }
     /* Each square should be 100px by 100px */
     /* My colours for white: #f0d9b5, black: #b58863 */
@@ -30,6 +39,7 @@
 </head>
 
 <body>
+  <div class="parent">
   <div class="container">
     <div class="white"></div>
     <div class="black"></div>
@@ -96,6 +106,7 @@
     <div class="black"></div>
     <div class="white"></div>
   </div>
+</div>
 </body>
 
 </html>
